@@ -1,0 +1,5 @@
+GOAL 1:
+	Create 4 rooms with 4 npcs with 4 different personalities.
+		Generate the personalities
+			Generate the NPCs
+				Generate the rooms
