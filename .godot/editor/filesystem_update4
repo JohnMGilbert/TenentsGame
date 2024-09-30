@@ -1,0 +1,9 @@
+res://main.tscn
+res://temp_tiles.tres
+res://tenant.tscn
+res://player.tscn
+res://interaction_area.tscn
+res://interaction_area.gd
+res://Player.gd
+res://scenes/npc/tenant_entity.gd
+res://scenes/npc/tenant.tscn

@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://d38x6afumwyb1"]
+
+[ext_resource type="Script" path="res://scenes/npc/tenant_entity.gd" id="1_3dib6"]
+[ext_resource type="Texture2D" uid="uid://bj8swgrad0fp3" path="res://asset/temp_objects.png" id="2_kjq84"]
+[ext_resource type="PackedScene" uid="uid://c5dlnodiixw4l" path="res://interaction_area.tscn" id="3_20kpl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jwihu"]
+atlas = ExtResource("2_kjq84")
+region = Rect2(167, 10, 18, 52)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2uecp"]
+
+[node name="Tenant" type="Node2D"]
+script = ExtResource("1_3dib6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_jwihu")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("RectangleShape2D_2uecp")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Label" type="Label" parent="."]
+offset_left = -20.0
+offset_top = -49.0
+offset_right = 20.0
+offset_bottom = -26.0
+
+[node name="Interaction_Area" parent="." instance=ExtResource("3_20kpl")]

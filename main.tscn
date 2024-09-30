@@ -1,3 +1,37 @@
-[gd_scene format=3 uid="uid://cmr3x21iovtum"]
+[gd_scene load_steps=6 format=3 uid="uid://cmr3x21iovtum"]
+
+[ext_resource type="TileSet" uid="uid://c8tqp803q4vui" path="res://temp_tiles.tres" id="1_5gmhm"]
+[ext_resource type="Texture2D" uid="uid://bj8swgrad0fp3" path="res://asset/temp_objects.png" id="1_6wb5v"]
+[ext_resource type="PackedScene" uid="uid://c5nolkrpts21y" path="res://player.tscn" id="2_dcarp"]
+[ext_resource type="PackedScene" uid="uid://d38x6afumwyb1" path="res://scenes/npc/tenant.tscn" id="4_djaxn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ex67a"]
+atlas = ExtResource("1_6wb5v")
+region = Rect2(2.08165e-12, 10.1095, 160.489, 72.6846)
 
 [node name="main" type="Node2D"]
+position = Vector2(327, 185)
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource("1_5gmhm")
+format = 2
+layer_0/tile_data = PackedInt32Array(-720883, 786432, 0, -655347, 786432, 0, -589811, 786432, 0, -524275, 786432, 0, -458739, 786432, 0, -393203, 786432, 0, -327667, 786432, 0, -327668, 786432, 0, -327669, 786432, 0, -327670, 786432, 0, -327671, 786432, 0, -327672, 786432, 0, -327673, 786432, 0, -327674, 786432, 0, -327675, 786432, 0, -720884, 786432, 0, -720885, 786432, 0, -720886, 786432, 0, -720887, 786432, 0, -720888, 786432, 0, -720889, 786432, 0, -720890, 786432, 0, -720891, 786432, 0, -655355, 786432, 0, -589819, 786432, 0, -524283, 786432, 0, -327679, 786432, 0, -327680, 786432, 0, -262145, 786432, 0, -262146, 786432, 0, -262147, 786432, 0, -262148, 786432, 0, -262149, 786432, 0, -262150, 786432, 0, -262151, 786432, 0, -327687, 786432, 0, -393223, 786432, 0, -458759, 786432, 0, -524295, 786432, 0, -589831, 786432, 0, -655367, 786432, 0, -655366, 786432, 0, -655365, 786432, 0, -655364, 786432, 0, -655363, 786432, 0, -655362, 786432, 0, -655361, 786432, 0, -720896, 786432, 0, -720895, 786432, 0, -655359, 786432, 0, -589823, 786432, 0, -524287, 786432, 0, -917499, 786432, 0, -983035, 786432, 0, -1048571, 786432, 0, -1114107, 786432, 0, -1179643, 786432, 0, -1179642, 786432, 0, -1179641, 786432, 0, -1179640, 786432, 0, -1179639, 786432, 0, -1179638, 786432, 0, -1179637, 786432, 0, -1179636, 786432, 0, -1179635, 786432, 0, -1114099, 786432, 0, -1048563, 786432, 0, -983027, 786432, 0, -917491, 786432, 0, -851955, 786432, 0, -786419, 786432, 0, -720903, 786432, 0, -786439, 786432, 0, -851975, 786432, 0, -917511, 786432, 0, -983047, 786432, 0, -1048583, 786432, 0, -1114119, 786432, 0, -1114118, 786432, 0, -1114117, 786432, 0, -1114116, 786432, 0, -1114115, 786432, 0, -1114114, 786432, 0, -1114113, 786432, 0, -1179648, 786432, 0, -1179647, 786432, 0, -1114111, 786432, 0, -1048575, 786432, 0, -983039, 786432, 0, -917503, 786432, 0, -1179646, 786432, 0, -1179645, 786432, 0, -1179644, 786432, 0)
+
+[node name="Player" parent="." instance=ExtResource("2_dcarp")]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-115, 3)
+texture = SubResource("AtlasTexture_ex67a")
+
+[node name="Tenant" parent="." instance=ExtResource("4_djaxn")]
+position = Vector2(-44, -217)
+
+[node name="Tenant2" parent="." instance=ExtResource("4_djaxn")]
+position = Vector2(185, -212)
+
+[node name="Tenant3" parent="." instance=ExtResource("4_djaxn")]
+position = Vector2(-48, -109)
+
+[node name="Tenant4" parent="." instance=ExtResource("4_djaxn")]
+position = Vector2(177, -110)
