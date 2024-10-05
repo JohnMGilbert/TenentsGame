@@ -3,3 +3,6 @@ res://temp_tiles.tres
 res://main.tscn
 res://player.tscn
 res://interaction_area.tscn
+res://Terrain_Generation.tscn
+res://Terrain_Generation.gd
+res://Player.gd
