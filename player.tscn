@@ -20,6 +20,7 @@ script = ExtResource("2_rj2u4")
 texture = SubResource("AtlasTexture_oivrm")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
 
 [node name="DialogueLabel" parent="." instance=ExtResource("3_rr5tf")]
 
