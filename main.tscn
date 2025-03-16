@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://cmr3x21iovtum"]
+[gd_scene load_steps=8 format=3 uid="uid://cmr3x21iovtum"]
 
+[ext_resource type="Script" path="res://main.gd" id="1_2j4me"]
 [ext_resource type="TileSet" uid="uid://c8tqp803q4vui" path="res://temp_tiles.tres" id="1_5gmhm"]
 [ext_resource type="Texture2D" uid="uid://bj8swgrad0fp3" path="res://asset/temp_objects.png" id="1_6wb5v"]
 [ext_resource type="PackedScene" uid="uid://c5nolkrpts21y" path="res://player.tscn" id="2_dcarp"]
@@ -12,6 +13,7 @@ region = Rect2(2.08165e-12, 10.1095, 160.489, 72.6846)
 
 [node name="main" type="Node2D"]
 position = Vector2(327, 185)
+script = ExtResource("1_2j4me")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("1_5gmhm")
