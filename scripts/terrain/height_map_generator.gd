@@ -18,6 +18,8 @@ var noise := FastNoiseLite.new()
 func _ready():
 	# Optional: auto-generate on scene load
 	generate_height_map()
+	$"../DebugVisualizer".generate_debug_multimesh()
+
 
 func generate_height_map():
 	if terrain_map_manager == null:
@@ -45,11 +47,13 @@ func generate_height_map():
 			value = (value + 1.0) * 0.5
 
 
-			if value < 0.5:
+			if value < 0.3:
 				value = 0.0  # Flat ground level
-			elif value < 0.5:
+			elif value < 0.6:
 				value = 0.5  # Gentle hills
-			# Else: leave as is for higher terrain (mountains, cliffs)
+			else:
+				value = 1.0  # High cliffs/mountains
+
 
 			var cell = terrain_map_manager.terrain_map[x][y]
 			cell.height = value
@@ -58,6 +62,7 @@ func generate_height_map():
 
 	print("Height map generated!")
 	post_process_connectivity()
+	$"../DebugVisualizer".generate_debug_multimesh()
 	
 func flood_fill(start_pos: Vector2i) -> Array:
 	var connected_tiles: Array = []

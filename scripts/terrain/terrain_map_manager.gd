@@ -2,8 +2,8 @@
 extends Node2D
 class_name TerrainMapManager
 
-@export var map_width: int = 50
-@export var map_height: int = 50
+@export var map_width: int = 500
+@export var map_height: int = 500
 @export var block_size: int = 16  # How big the blocks are (visual size)
 
 var terrain_map: Array = []

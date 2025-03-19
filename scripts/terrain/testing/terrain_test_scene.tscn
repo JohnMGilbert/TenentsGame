@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://cws6t80uteso4"]
+
+[ext_resource type="Script" path="res://Camera2D.gd" id="1_rkd4e"]
+[ext_resource type="Script" path="res://scripts/terrain/terrain_map_manager.gd" id="2_gnfao"]
+[ext_resource type="Script" path="res://scripts/terrain/debub_visualizer.gd" id="3_qh0ge"]
+[ext_resource type="Script" path="res://scripts/terrain/height_map_generator.gd" id="4_xyhax"]
+[ext_resource type="PackedScene" uid="uid://cs3263gxxeecp" path="res://command_input.tscn" id="5_or17t"]
+
+[node name="TerrainTestScene" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("1_rkd4e")
+
+[node name="TerrainMapManager" type="Node2D" parent="."]
+script = ExtResource("2_gnfao")
+
+[node name="DebugVisualizer" type="MultiMeshInstance2D" parent="." node_paths=PackedStringArray("terrain_map_manager")]
+script = ExtResource("3_qh0ge")
+terrain_map_manager = NodePath("../TerrainMapManager")
+
+[node name="HeightMap" type="Node2D" parent="." node_paths=PackedStringArray("terrain_map_manager")]
+script = ExtResource("4_xyhax")
+terrain_map_manager = NodePath("../TerrainMapManager")
+ground_level_threshold = 0.5
+
+[node name="CommandInput" parent="." instance=ExtResource("5_or17t")]
