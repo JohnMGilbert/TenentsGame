@@ -21,6 +21,5 @@ terrain_map_manager = NodePath("../TerrainMapManager")
 [node name="HeightMap" type="Node2D" parent="." node_paths=PackedStringArray("terrain_map_manager")]
 script = ExtResource("4_xyhax")
 terrain_map_manager = NodePath("../TerrainMapManager")
-ground_level_threshold = 0.5
 
 [node name="CommandInput" parent="." instance=ExtResource("5_or17t")]

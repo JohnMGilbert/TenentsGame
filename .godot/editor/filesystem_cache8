@@ -1,5 +1,5 @@
 98a70190bc03ec62debef81a9418c486
-::res://::1742348045
+::res://::1742353191
 Camera2D.gd::GDScript::-1::1742094402::0::1::::CameraController<>Camera2D<>::
 command_input.tscn::PackedScene::6095739329398747987::1742076397::0::1::::<><>::res://FPS_meter.gd
 FPS_meter.gd::GDScript::-1::1742070551::0::1::::<>Label<>::
@@ -12,7 +12,6 @@ notes.txt::TextFile::-1::1727548486::0::1::::<><>::
 Player.gd::GDScript::-1::1728082171::0::1::::<>CharacterBody2D<>::
 player.tscn::PackedScene::6906213821164472920::1742343628::0::1::::<><>::uid://bj8swgrad0fp3::::res://asset/temp_objects.png<>res://Player.gd<>uid://ckvgyvclnwggo::::res://addons/dialogue_manager/dialogue_label.tscn
 temp_tiles.tres::TileSet::7129296416746646572::1742343574::0::1::::<><>::uid://bj8swgrad0fp3::::res://asset/temp_objects.png
-TerrainMapView.gd::GDScript::-1::1742344554::0::1::::TerrainMapView<>TextureRect<>::
 Terrain_Generation.gd::GDScript::-1::1729136827::0::1::::<>TileMap<>::
 Terrain_Generation.tscn::PackedScene::3645993796807711344::1742076564::0::1::::<><>::uid://b5o7k6ggcylg0::::res://asset/testing_blocks.png<>res://Terrain_Generation.gd<>uid://c5nolkrpts21y::::res://player.tscn
 ::res://addons/::1739252777
@@ -96,16 +95,17 @@ default_biome.gd::GDScript::-1::1742062192::0::1::::<>Node<>::
 ::res://scenes/npc/::1742343628
 tenant.tscn::PackedScene::9194125997922522060::1742343628::0::1::::<><>::res://scenes/npc/tenant_entity.gd<>uid://bj8swgrad0fp3::::res://asset/temp_objects.png<>uid://c5dlnodiixw4l::::res://interaction_area.tscn
 tenant_entity.gd::GDScript::-1::1727666114::0::1::::<>Node<>::
-::res://scripts/::1742348027
+::res://scripts/::1742348050
 biome_data.gd::GDScript::-1::1742061976::0::1::::BiomeData<>Resource<>::
 biome_manager.gd::GDScript::-1::1742062247::0::1::::BiomeManager<>Node<>::
-::res://scripts/terrain/::1742348027
+::res://scripts/terrain/::1742351980
 chunk.gd::GDScript::-1::1742076713::0::1::::Chunk<>Node2D<>::
 chunk_manager.gd::GDScript::-1::1742076163::0::1::::<>Node<>::
-debub_visualizer.gd::GDScript::-1::1742347786::0::1::::DebugVisualizer<>MultiMeshInstance2D<>::
+debub_visualizer.gd::GDScript::-1::1742351980::0::1::::DebugVisualizer<>MultiMeshInstance2D<>::
 height_map_generator.gd::GDScript::-1::1742346149::0::1::::HeightMapGenerator<>Node<>::
 terrain_data.gd::GDScript::-1::1742062892::0::1::::TerrainCell<>Resource<>::
 terrain_map_manager.gd::GDScript::-1::1742347003::0::1::::TerrainMapManager<>Node2D<>::
-::res://scripts/terrain/testing/::1742348045
+::res://scripts/terrain/testing/::1742351980
 CachedTerrainDrawer.gd::GDScript::-1::1742073063::0::1::::CachedTerrainDrawer<>Control<>::
-terrain_test_scene.tscn::PackedScene::6356072656680886481::1742348031::0::1::::<><>::res://Camera2D.gd<>res://scripts/terrain/terrain_map_manager.gd<>res://scripts/terrain/debub_visualizer.gd<>res://scripts/terrain/height_map_generator.gd<>uid://cs3263gxxeecp::::res://command_input.tscn
+TerrainMapView.gd::GDScript::-1::1742344554::0::1::::TerrainMapView<>TextureRect<>::
+terrain_test_scene.tscn::PackedScene::6356072656680886481::1742351980::0::1::::<><>::res://Camera2D.gd<>res://scripts/terrain/terrain_map_manager.gd<>res://scripts/terrain/debub_visualizer.gd<>res://scripts/terrain/height_map_generator.gd<>uid://cs3263gxxeecp::::res://command_input.tscn

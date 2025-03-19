@@ -1,7 +1,7 @@
 extends Camera2D
 class_name CameraController
 
-@export var pan_speed: float = 500.0
+@export var pan_speed: float = 5000.0
 @export var zoom_speed: float = 0.1
 @export var min_zoom: float = 0.5
 @export var max_zoom: float = 4.0
