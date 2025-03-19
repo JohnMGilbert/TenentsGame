@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://br7e8q3hqq5ts"]
+
+[ext_resource type="Texture2D" uid="uid://b5o7k6ggcylg0" path="res://asset/testing_blocks.png" id="1_334ok"]
+[ext_resource type="Script" path="res://Terrain_Generation.gd" id="1_oxi7l"]
+[ext_resource type="PackedScene" uid="uid://c5nolkrpts21y" path="res://player.tscn" id="3_a6dpo"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p60p4"]
+texture = ExtResource("1_334ok")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, -8)
+1:0/0 = 0
+1:0/0/texture_origin = Vector2i(0, -8)
+2:0/0 = 0
+2:0/0/texture_origin = Vector2i(0, -8)
+3:0/0 = 0
+3:0/0/texture_origin = Vector2i(0, -8)
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+0:1/0/texture_origin = Vector2i(0, -8)
+1:1/0 = 0
+1:1/0/texture_origin = Vector2i(0, -8)
+2:1/0 = 0
+2:1/0/texture_origin = Vector2i(0, -8)
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_tbjp0"]
+tile_shape = 1
+tile_layout = 5
+tile_offset_axis = 1
+tile_size = Vector2i(32, 16)
+sources/0 = SubResource("TileSetAtlasSource_p60p4")
+
+[node name="Node2D" type="TileMap"]
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(85, -221)
+tile_set = SubResource("TileSet_tbjp0")
+format = 2
+script = ExtResource("1_oxi7l")
+
+[node name="Player" parent="." instance=ExtResource("3_a6dpo")]

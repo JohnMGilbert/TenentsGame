@@ -1,5 +1,2 @@
-res://scenes/npc/tenant.tscn
-res://temp_tiles.tres
-res://main.tscn
-res://player.tscn
-res://interaction_area.tscn
+res://scripts/terrain/testing/terrain_test_scene.tscn
+res://scripts/terrain/debub_visualizer.gd
