@@ -9,6 +9,7 @@
 [node name="TerrainTestScene" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(5, 5)
 script = ExtResource("1_rkd4e")
 
 [node name="TerrainMapManager" type="Node2D" parent="."]

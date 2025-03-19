@@ -1,4 +1,2 @@
 res://scripts/terrain/testing/terrain_test_scene.tscn
 res://scripts/terrain/debub_visualizer.gd
-res://Camera2D.gd
-res://scripts/terrain/height_map_generator.gd
