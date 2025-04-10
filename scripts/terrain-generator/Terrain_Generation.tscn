@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://br7e8q3hqq5ts"]
 
 [ext_resource type="Texture2D" uid="uid://b5o7k6ggcylg0" path="res://asset/testing_blocks.png" id="1_334ok"]
-[ext_resource type="Script" path="res://Terrain_Generation.gd" id="1_oxi7l"]
+[ext_resource type="Script" path="res://scripts/terrain-generator/Terrain_Generation.gd" id="1_oxi7l"]
 [ext_resource type="PackedScene" uid="uid://c5nolkrpts21y" path="res://player.tscn" id="3_a6dpo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p60p4"]

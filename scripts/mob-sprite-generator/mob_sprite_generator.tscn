@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://buarufyvpb458"]
+
+[ext_resource type="Script" path="res://scripts/mob-sprite-generator/mob_sprite_generator.gd" id="1_p5eof"]
+
+[node name="MobSpriteGenerator" type="Node2D"]
+script = ExtResource("1_p5eof")
+
+[node name="SpriteDisplay" type="Sprite2D" parent="."]
+texture_filter = 1
+
+[node name="GenerateButton" type="Button" parent="."]
+offset_right = 73.0
+offset_bottom = 51.0
+text = "next"
+
+[node name="SeedLabel" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[connection signal="pressed" from="GenerateButton" to="." method="_on_generate_button_pressed"]
