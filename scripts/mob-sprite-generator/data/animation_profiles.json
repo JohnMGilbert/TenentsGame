@@ -1,0 +1,14 @@
+{
+  "biped_walk": {
+	"states": ["idle", "walk", "attack"],
+	"default_state": "idle"
+  },
+  "flyer_float": {
+	"states": ["idle", "float", "dive"],
+	"default_state": "float"
+  },
+  "blob_squish": {
+	"states": ["idle", "roll", "slam"],
+	"default_state": "idle"
+  }
+}

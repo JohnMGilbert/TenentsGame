@@ -4,7 +4,8 @@ extends Node2D
 @onready var seed_label := $SeedLabel
 @onready var generate_button := $GenerateButton
 
-var seed := 0
+const Archetypes = preload("res://scripts/mob-sprite-generator/old_code/archetypes.gd")
+var seed := 1
 var scaler := 8
 var sprite_texture : ImageTexture
 
@@ -26,33 +27,35 @@ func update_seed_label():
 		seed_label.text = "Seed: %d" % seed
 	
 func generate_sprite():
-	var generator = preload("res://scripts/mob-sprite-generator/sprite_generator.gd").new()
+	var archetype_id = Archetypes.get_archetype_for_seed(seed)
+	print("Archetype: ", Archetypes.get_archetype_name(archetype_id))
+	var generator = preload("res://scripts/mob-sprite-generator/old_code/sprite_generator.gd").new()
 	generator.set_seed(seed)
-
+	
 	var grid = generator.generate_raw_grid()
 	
 	# === CLASSIFY PARTS ===
-	var analyzer = preload("res://scripts/mob-sprite-generator/analyzer.gd").new()
+	var analyzer = preload("res://scripts/mob-sprite-generator/old_code/analyzer.gd").new()
 	var parts = analyzer.classify_parts(grid)
 	
 
-	var colorizer = preload("res://scripts/mob-sprite-generator/colorizer.gd").new()
+	var colorizer = preload("res://scripts/mob-sprite-generator/old_code/colorizer.gd").new()
 	colorizer.set_seed(seed)
 	var palette = colorizer.get_palette()
 	var image = colorizer.apply_palette(grid, palette)
 	image = colorizer.add_outline(image)
 	
 	# DEBUG COLORS
-	var debug_image = colorizer.debug_render_parts(parts, grid.size())
-	var sprite_texture = ImageTexture.create_from_image(debug_image)
-	sprite_display.texture = sprite_texture
-
-
-	# === DEBUG PARTS ===
-	for role in parts.keys():
-		print("%s: %d pixels" % [role, parts[role].size()])
+	#var debug_image = colorizer.debug_render_parts(parts, grid.size())
+	#var sprite_texture = ImageTexture.create_from_image(debug_image)
+	#sprite_display.texture = sprite_texture
+#
+#
+	## === DEBUG PARTS ===
+	#for role in parts.keys():
+		#print("%s: %d pixels" % [role, parts[role].size()])
 	
-	#var sprite_texture = ImageTexture.create_from_image(image)
+	var sprite_texture = ImageTexture.create_from_image(image)
 
 	sprite_display.texture = sprite_texture
 	sprite_display.scale = Vector2(scaler, scaler)
