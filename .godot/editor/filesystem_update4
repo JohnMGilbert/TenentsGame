@@ -1,2 +1,3 @@
-res://scripts/terrain/testing/terrain_test_scene.tscn
+res://scripts/mob-sprite-generator/tools/mob_viewer.tscn
 res://scripts/terrain/debub_visualizer.gd
+res://scripts/terrain/testing/terrain_test_scene.tscn

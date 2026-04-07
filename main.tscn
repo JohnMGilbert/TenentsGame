@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bj8swgrad0fp3" path="res://asset/temp_objects.png" id="1_6wb5v"]
 [ext_resource type="PackedScene" uid="uid://c5nolkrpts21y" path="res://player.tscn" id="2_dcarp"]
 [ext_resource type="PackedScene" uid="uid://d38x6afumwyb1" path="res://scenes/npc/tenant.tscn" id="4_djaxn"]
-[ext_resource type="PackedScene" uid="uid://br7e8q3hqq5ts" path="res://Terrain_Generation.tscn" id="5_8jiim"]
+[ext_resource type="PackedScene" uid="uid://br7e8q3hqq5ts" path="res://scripts/terrain-generator/Terrain_Generation.tscn" id="5_8jiim"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ex67a"]
 atlas = ExtResource("1_6wb5v")

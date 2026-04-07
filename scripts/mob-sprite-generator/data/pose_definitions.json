@@ -1,0 +1,16 @@
+{
+  "idle": {
+	"head": { "offset": [0, -1], "bob": true },
+	"limb1": { "angle": 0 },
+	"limb2": { "angle": 0 }
+  },
+  "walk": {
+	"head": { "offset": [0, -1], "bob": true },
+	"limb1": { "swing": [-15, 15], "speed": 1.0 },
+	"limb2": { "swing": [15, -15], "speed": 1.0 }
+  },
+  "attack": {
+	"limb1": { "thrust": true, "angle": -45 },
+	"limb2": { "angle": 45 }
+  }
+}

@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://dsl8c82mmey7r"]
+
+[ext_resource type="Script" path="res://scripts/mob-sprite-generator/tools/mob_viewer.gd" id="1_fnokf"]
+
+[node name="MobViewer" type="Node2D"]
+script = ExtResource("1_fnokf")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="SeedLabel" type="Label" parent="UI"]
+offset_left = 14.0
+offset_top = 12.0
+offset_right = 54.0
+offset_bottom = 35.0
+text = "Seed: "
+
+[node name="GenerateButton" type="Button" parent="UI"]
+offset_left = 14.0
+offset_top = 36.0
+offset_right = 94.0
+offset_bottom = 67.0
+text = "Generate
+"
+
+[node name="MobRoot" type="Node2D" parent="."]
+
+[node name="SpritePreview" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(8, 8)
+
+[connection signal="pressed" from="UI/GenerateButton" to="." method="_on_generate_button_pressed"]
