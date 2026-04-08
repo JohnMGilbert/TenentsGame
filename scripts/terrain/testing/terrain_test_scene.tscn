@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://cws6t80uteso4"]
 
-[ext_resource type="Script" path="res://Camera2D.gd" id="1_rkd4e"]
+[ext_resource type="Script" path="res://scripts/game/camera/camera_controller.gd" id="1_rkd4e"]
 [ext_resource type="Script" path="res://scripts/terrain/terrain_map_manager.gd" id="2_gnfao"]
 [ext_resource type="Script" path="res://scripts/terrain/debub_visualizer.gd" id="3_qh0ge"]
 [ext_resource type="Script" path="res://scripts/terrain/height_map_generator.gd" id="4_xyhax"]
-[ext_resource type="PackedScene" uid="uid://cs3263gxxeecp" path="res://command_input.tscn" id="5_or17t"]
+[ext_resource type="PackedScene" uid="uid://cs3263gxxeecp" path="res://scenes/ui/command_input.tscn" id="5_or17t"]
 
 [node name="TerrainTestScene" type="Node2D"]
 

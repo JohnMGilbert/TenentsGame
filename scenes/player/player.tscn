@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://c5nolkrpts21y"]
 
 [ext_resource type="Texture2D" uid="uid://bj8swgrad0fp3" path="res://asset/temp_objects.png" id="1_pd0kn"]
-[ext_resource type="Script" path="res://Player.gd" id="2_rj2u4"]
+[ext_resource type="Script" path="res://scripts/game/player/player_controller.gd" id="2_rj2u4"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="3_rr5tf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oivrm"]

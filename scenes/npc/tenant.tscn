@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://d38x6afumwyb1"]
 
-[ext_resource type="Script" path="res://scenes/npc/tenant_entity.gd" id="1_3dib6"]
+[ext_resource type="Script" path="res://scripts/game/tenants/tenant_entity.gd" id="1_3dib6"]
 [ext_resource type="Texture2D" uid="uid://bj8swgrad0fp3" path="res://asset/temp_objects.png" id="2_kjq84"]
-[ext_resource type="PackedScene" uid="uid://c5dlnodiixw4l" path="res://interaction_area.tscn" id="3_20kpl"]
+[ext_resource type="PackedScene" uid="uid://c5dlnodiixw4l" path="res://scenes/interactions/interaction_area.tscn" id="3_20kpl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jwihu"]
 atlas = ExtResource("2_kjq84")

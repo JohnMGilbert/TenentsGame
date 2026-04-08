@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://cmr3x21iovtum"]
 
-[ext_resource type="Script" path="res://main.gd" id="1_2j4me"]
+[ext_resource type="Script" path="res://scripts/game/main/main_scene_controller.gd" id="1_2j4me"]
 [ext_resource type="TileSet" uid="uid://c8tqp803q4vui" path="res://temp_tiles.tres" id="1_5gmhm"]
 [ext_resource type="Texture2D" uid="uid://bj8swgrad0fp3" path="res://asset/temp_objects.png" id="1_6wb5v"]
-[ext_resource type="PackedScene" uid="uid://c5nolkrpts21y" path="res://player.tscn" id="2_dcarp"]
+[ext_resource type="PackedScene" uid="uid://c5nolkrpts21y" path="res://scenes/player/player.tscn" id="2_dcarp"]
 [ext_resource type="PackedScene" uid="uid://d38x6afumwyb1" path="res://scenes/npc/tenant.tscn" id="4_djaxn"]
 [ext_resource type="PackedScene" uid="uid://br7e8q3hqq5ts" path="res://scripts/terrain-generator/Terrain_Generation.tscn" id="5_8jiim"]
 

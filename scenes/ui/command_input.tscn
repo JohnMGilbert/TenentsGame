@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cs3263gxxeecp"]
 
-[ext_resource type="Script" path="res://FPS_meter.gd" id="1_3g6dr"]
+[ext_resource type="Script" path="res://scripts/game/ui/fps_meter.gd" id="1_3g6dr"]
 
 [node name="CommandInput" type="Control"]
 layout_mode = 3

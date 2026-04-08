@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c5dlnodiixw4l"]
 
-[ext_resource type="Script" path="res://interaction_area.gd" id="1_vh20r"]
+[ext_resource type="Script" path="res://scripts/game/interactions/interaction_area.gd" id="1_vh20r"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_73jdo"]
 radius = 35.0571

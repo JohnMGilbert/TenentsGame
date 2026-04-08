@@ -1,6 +1,7 @@
 98a70190bc03ec62debef81a9418c486
-::res://::1750272037
+::res://::1775597880
 Camera2D.gd::GDScript::-1::1742402738::0::1::::CameraController<>Camera2D<>::
+codexREF.md::TextFile::-1::1775597712::0::1::::<><>::
 command_input.tscn::PackedScene::6095739329398747987::1742402738::0::1::::<><>::res://FPS_meter.gd
 FPS_meter.gd::GDScript::-1::1742402738::0::1::::<>Label<>::
 icon.svg::CompressedTexture2D::33832900583435257::1727547260::1727552013::1::::<><>::
@@ -11,6 +12,7 @@ main.tscn::PackedScene::5651944520597289352::1744322393::0::1::::<><>::res://mai
 notes.txt::TextFile::-1::1727548486::0::1::::<><>::
 Player.gd::GDScript::-1::1744321447::0::1::::<>CharacterBody2D<>::
 player.tscn::PackedScene::6906213821164472920::1744321447::0::1::::<><>::uid://bj8swgrad0fp3::::res://asset/temp_objects.png<>res://Player.gd<>uid://ckvgyvclnwggo::::res://addons/dialogue_manager/dialogue_label.tscn
+README.md::TextFile::-1::1775597712::0::1::::<><>::
 temp_tiles.tres::TileSet::7129296416746646572::1742343574::0::1::::<><>::uid://bj8swgrad0fp3::::res://asset/temp_objects.png
 ::res://addons/::1739252777
 ::res://addons/dialogue_manager/::1739252777

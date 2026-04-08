@@ -2,7 +2,7 @@ extends TileMap
 
 var noise := FastNoiseLite.new()
 const NUM_LAYERS = 8
-var map_matrix = []
+var map_matrix: Array = []
 var map_height = 300
 var map_width = 300
 
@@ -24,6 +24,8 @@ var atlas_coordinates = {
 }
 
 func _ready():
+	map_matrix.clear()
+
 	for l in range(NUM_LAYERS-1):
 		add_layer(l)
 		set_layer_y_sort_enabled(l,true)
@@ -47,6 +49,8 @@ func _ready():
 	# Generate the terrain using Perlin noise
 	generate_terrain(map_height, map_width, 1)  # Width, height, and scale
 	get_atlas_coords_matrix(map_height,map_width,map_matrix)
+
+
 # Generates a matrix with values representing what layer the terrain block is on
 func generate_terrain(width, height, scaler):
 	# Loop through each point on the grid
@@ -58,11 +62,8 @@ func generate_terrain(width, height, scaler):
 			var ny = y / scaler
 			var noise_value = noise.get_noise_2d(nx, ny) # Between -1, 1
 			var normalized_value = (noise_value + 1.0) / 2.0
-			var layer = int(normalized_value * NUM_LAYERS)
-			print(layer)
-			#layer = clamp(layer, 0, NUM_LAYERS - 1)
+			var layer = clampi(int(normalized_value * NUM_LAYERS), 0, NUM_LAYERS - 1)
 			row.append(layer)
-			#set_cell(abs(layer-NUM_LAYERS-1), Vector2i(x-layer,y-layer),0,Vector2i(2,1))
 		map_matrix.append(row)
 
 
@@ -71,19 +72,19 @@ func get_atlas_coords_matrix(width, height, map_values):
 		for x in range(width):
 			var neighbors = get_neighbors(map_values,x,y)
 			var atlas_val = get_atlas_val_from_neighbors(neighbors)
-			var layer = map_values[x][y]
+			var layer = map_values[y][x]
 			if atlas_coordinates.has(atlas_val):
-				set_cell(map_values[x][y],Vector2i(x-layer,y-layer),0,atlas_coordinates[atlas_val])
+				set_cell(layer, Vector2i(x - layer, y - layer), 0, atlas_coordinates[atlas_val])
 				var down_layer = layer
 				while (down_layer >= 0):
-					set_cell(down_layer,Vector2i(x-down_layer,y-down_layer),0,Vector2i(2,1))
+					set_cell(down_layer, Vector2i(x - down_layer, y - down_layer), 0, Vector2i(2,1))
 					down_layer -= 1
 					
 			else:
-				set_cell(map_values[x][y],Vector2i(x-layer,y-layer),0,Vector2i(2,1))
+				set_cell(layer, Vector2i(x - layer, y - layer), 0, Vector2i(2,1))
 				var down_layer = layer
 				while (down_layer >= 0):
-					set_cell(down_layer,Vector2i(x-down_layer,y-down_layer),0,Vector2i(2,1))
+					set_cell(down_layer, Vector2i(x - down_layer, y - down_layer), 0, Vector2i(2,1))
 					down_layer -= 1
 
 # Function to get a 3x3 matrix of neighbors with the center block
@@ -104,8 +105,8 @@ func get_neighbors(matrix, x, y):
 			var ny = y + dy
 			
 			# Ensure we don't go out of bounds of the original matrix
-			if nx >= 0 and nx < matrix.size() and ny >= 0 and ny < matrix[0].size():
-				neighbor_matrix[dy + 1][dx + 1] = matrix[nx][ny]
+			if ny >= 0 and ny < matrix.size() and nx >= 0 and nx < matrix[0].size():
+				neighbor_matrix[dy + 1][dx + 1] = matrix[ny][nx]
 	return neighbor_matrix
 	
 # Optimized to testing, not full implementation
@@ -134,10 +135,12 @@ func get_atlas_val_from_neighbors(current_cell_mat):
 	# Example:
 	return res  # Or the atlas value
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("ui_layer_down"):
-		self.set_layer_enabled(layers_enabled,false)
-		layers_enabled -= 1
+		if layers_enabled >= 0:
+			set_layer_enabled(layers_enabled, false)
+			layers_enabled -= 1
 	if Input.is_action_just_pressed("ui_layer_up"):
-		set_layer_enabled(layers_enabled + 1,true)
-		layers_enabled += 1
+		if layers_enabled < NUM_LAYERS - 2:
+			layers_enabled += 1
+			set_layer_enabled(layers_enabled, true)
